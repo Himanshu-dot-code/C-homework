@@ -12,17 +12,24 @@ and f(1)=1 and f(0)= 0
 
 #include<stdio.h>
 
-int fibonacci(int x);
-int fibonacci(int x)
+int fibonacci(int);
+int fibonacci(int n)
 {
-    if (x=1){
-        
+    if (n==1){
+        return 0;
     }
+else if (n==2)
+{
+    return 1;
+}
+else {
 
+    return  fibonacci(n-1)+ fibonacci(n-2);
+}
 }
 int main(){
-
-
-
+    int n = 6;
+    printf("the value of n is %d ", n);
+    printf(" the fibonacci term is %d", fibonacci(n));
     return 0;
 } 

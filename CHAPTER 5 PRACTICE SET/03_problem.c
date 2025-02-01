@@ -3,7 +3,7 @@
 
 #include<stdio.h>
 // function prototype
-float force(float x);
+float force(float);
 // fuction definition
 float force(float x)
 {

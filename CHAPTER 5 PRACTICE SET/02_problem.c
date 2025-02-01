@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-float c_to_f(float a);
+float c_to_f(float);
 
 int main(){
 
