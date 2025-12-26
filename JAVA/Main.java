@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main{
         static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[]args){
 
 
@@ -194,16 +195,18 @@ public class Main{
 
 // BANKING PROGRAM 
 
-        // Declare variables 
+// Declare variables ;
 
         double balance = 0;
         int choice;
         boolean isRunning = true;
 
-        // Menu
+// MENU;
 
         do{
+        System.out.println("****************");
         System.out.println("BANKING PROGRAM");
+        System.out.println("****************");
         System.out.println("1.SHOW BALANCE\n2.DEPOSIT\n3.WITHDRAW\n4.EXIT");
         System.out.println("Enter your choice: ");
         choice = scanner.nextInt();
@@ -224,13 +227,13 @@ public class Main{
 
  }
 
-//  show balance function
+//  SHOWBALANCE FUNCTION;
 
  static void showBalance(double balance){
         System.out.println("Balance : " + balance);
 }
 
-// deposit
+// DEPOSIT;
 
 static Double deposit(){
 
@@ -246,7 +249,7 @@ static Double deposit(){
         }       
 }
 
-// withdraw
+// WITHDRAW;
 
 static double withdraw(double balance){
         System.out.println("Enter the amount to withdraw: ");
@@ -265,7 +268,7 @@ static double withdraw(double balance){
         }
 }
 
-// exit
+// EXIT;
 
 static int exit(){
         
