@@ -1,11 +1,15 @@
 import java.util.Scanner;
-// import java.util.Random;
+import java.util.Random;
 
 public class Main{
-        static Scanner scanner = new Scanner(System.in);
+        
+        public static void main(String[]args){
+                
+                 Scanner scanner = new Scanner(System.in);
+                 Random random = new Random();
 
-    public static void main(String[]args){
 
+//  SIMPLE ARITHMETIC OPERATION
 
         // System.out.print("Enter a Number: ");
         // int first = scanner.nextInt();
@@ -33,7 +37,7 @@ public class Main{
         //     System.out.print(" division is : " + div);
         // }
 
- // MADLIB GAME
+// MADLIB GAME
 
         // System.out.print("Enter a name: ");
         // String name = scanner.nextLine();
@@ -56,6 +60,7 @@ public class Main{
         //     "Everyone watching said, \"This is the weirdest day ever!\""
         // );
 
+// SHOPPING CART 
 
         // System.out.print("Kya Chahiye tekko ?? ");
         // String item = scanner.nextLine();
@@ -105,6 +110,7 @@ public class Main{
         // System.out.print(st.charAt(length-1)) ;
 
 // USERNAME 
+
         // System.out.print("Enter ur full name: ");
         // String st = scanner.nextLine();
         // int l = st.length();
@@ -116,6 +122,7 @@ public class Main{
         // System.out.print("username is " + user + name);
 
 // FOOD ORDER
+
         // System.out.println(" 1. Pizza \n 2. Burger\n 3. kheer \n 4. Soup");
         // System.out.print("What would u like to order : ");
         // int order = scanner.nextInt();
@@ -197,82 +204,192 @@ public class Main{
 
 // Declare variables ;
 
-        double balance = 0;
-        int choice;
-        boolean isRunning = true;
+//         double balance = 0;
+//         int choice;
+//         boolean isRunning = true;
 
-// MENU;
+// // MENU;
 
-        do{
-        System.out.println("****************");
-        System.out.println("BANKING PROGRAM");
-        System.out.println("****************");
-        System.out.println("1.SHOW BALANCE\n2.DEPOSIT\n3.WITHDRAW\n4.EXIT");
-        System.out.println("Enter your choice: ");
-        choice = scanner.nextInt();
+//         do{
 
-        switch (choice) {
-                case 1 -> showBalance(balance);
-                case 2 -> balance += deposit();
-                case 3 -> balance -= withdraw(balance);
-                case 4 -> {
-                        isRunning=false;
-                        exit();
+//         System.out.println("****************");
+//         System.out.println("BANKING PROGRAM");
+//         System.out.println("****************");
+//         System.out.println("1.SHOW BALANCE\n2.DEPOSIT\n3.WITHDRAW\n4.EXIT");
+//         System.out.print("Enter your choice: ");
+//         choice = scanner.nextInt();
+
+//         switch (choice) {
+//                 case 1 -> showBalance(balance);
+//                 case 2 -> balance += deposit();
+//                 case 3 -> balance -= withdraw(balance);
+//                 case 4 -> {
+//                         isRunning=false;
+//                         exit();
+//                 }
+//                 default -> System.out.print("INVALID CHOICE");
+//         }
+
+// }while (isRunning);
+
+
+
+// DICE ROLLER PROGRAM
+        
+
+        // System.out.println("DICE ROLLER PROGRAM:");
+        // System.out.println("Enter the no. of times u wanna roll: ");
+        // int roller = scanner.nextInt();
+        // int total = 0;
+
+        // if(roller>0){
+        //         for(int i = 0; i<roller; i++){
+        //         int roll = random.nextInt(1,7);
+        //         printdie(roll);
+        //         System.out.println("YOu rolled : " + roll);
+        //          total +=  roll;
+
+        //         }
+                
+        //         System.out.println("Total = " + total);
+        // }
+        // else{
+        //         System.out.println("Number should be positive ");
+        // }
+
+
+        int[] List = {1,10,20,100,45,3,4,5,90};
+
+        int count = 0;
+
+        for(int i = 0; i< List.length ; i++){
+
+                if(List[i] > 10){
+
+                        count++;
                 }
-                default -> System.out.print("INVALID CHOICE");
+
         }
-}while (isRunning);
-         
+        System.out.print("Number of element greater than 10 : " + count);
+
         scanner.close(); 
 
  }
 
-//  SHOWBALANCE FUNCTION;
+// //  SHOWBALANCE FUNCTION;
 
- static void showBalance(double balance){
-        System.out.println("Balance : " + balance);
-}
+//  static void showBalance(double balance){
+//         System.out.println("Balance : " + balance);
+// }
 
-// DEPOSIT;
+// // DEPOSIT;
 
-static Double deposit(){
+// static Double deposit(){
 
-        System.out.println("Enter the amount to deposit: ");
-        double amount = scanner.nextDouble();
+//         System.out.println("Enter the amount to deposit: ");
+//         double amount = scanner.nextDouble();
 
-        if(amount < 0){
-                System.out.println("Amount cant be negative !!");
-                return 0.0;
-        }
-        else{
-                return amount;
-        }       
-}
+//         if(amount < 0){
+//                 System.out.println("Amount cant be negative !!");
+//                 return 0.0;
+//         }
+//         else{
+//                 return amount;
+//         }       
+// }
 
-// WITHDRAW;
+// // WITHDRAW;
 
-static double withdraw(double balance){
-        System.out.println("Enter the amount to withdraw: ");
-        double amount = scanner.nextDouble();
+// static double withdraw(double balance){
+        
+//         System.out.println("Enter the amount to withdraw: ");
+//         double amount = scanner.nextDouble();
 
-        if(amount>balance){
-                System.out.println("INSUFFICIENT FUNDS!!");
-                return 0;
-        }
-        else if(amount<0){
-                System.out.println("Amount can't be negative");
-                return 0;
-        }
-        else{
-                return amount;
-        }
-}
+//         if(amount>balance){
+//                 System.out.println("INSUFFICIENT FUNDS!!");
+//                 return 0;
+//         }
+//         else if(amount<0){
+//                 System.out.println("Amount can't be negative");
+//                 return 0;
+//         }
+//         else{
+//                 return amount;
+//         }
+// }
 
 // EXIT;
 
-static int exit(){
+// static int exit(){
         
-        System.out.print("Thank you!!");
-        return 0;
-}
+//         System.out.print("Thank you!!");
+//         return 0;
+// }
+
+// TO PRINT DIE ASCII CHARACTER
+// static void printdie(int roll){
+//         String dice1 ="""
+//                           ------------
+//                          |            |
+//                          |            |
+//                          |     ●      |
+//                          |            |
+//                          |            |
+//                           ------------
+//                         """; 
+//         String dice2 ="""
+//                           ------------
+//                          |●           |
+//                          |            |
+//                          |            |
+//                          |            |
+//                          |           ●|
+//                           ------------
+//                         """; 
+//         String dice3 ="""
+//                           ------------
+//                          |●           |
+//                          |            |
+//                          |      ●     |
+//                          |            |
+//                          |           ●|
+//                           ------------
+//                         """; 
+//         String dice4 ="""
+//                           ------------
+//                          |●          ●|
+//                          |            |
+//                          |            |
+//                          |            |
+//                          |●          ●|
+//                           ------------
+//                         """; 
+//         String dice5 ="""
+//                           ------------
+//                          |●          ●|
+//                          |            |
+//                          |      ●     |
+//                          |            |
+//                          |●          ●|
+//                           ------------
+//                         """; 
+//         String dice6 ="""
+//                           ------------
+//                          |●          ●|
+//                          |            |
+//                          |●          ●|
+//                          |            |
+//                          |●          ●|
+//                           ------------
+//                         """; 
+
+//         switch(roll){
+//                 case 1 -> System.out.print(dice1);
+//                 case 2 -> System.out.print(dice2);
+//                 case 3 -> System.out.print(dice3);
+//                 case 4 -> System.out.print(dice4);
+//                 case 5 -> System.out.print(dice5);
+//                 case 6 -> System.out.print(dice6);
+//         }
+// }
 }
