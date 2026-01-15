@@ -1,12 +1,72 @@
 import java.util.Scanner;
-import java.util.Random;
+// import java.util.Random;
 
+
+class Book{
+
+        String title;
+        int pages;
+
+        Book(String title, int pages){
+                this.title = title;
+                this.pages = pages;
+        }
+
+        void showInfo(){
+                System.out.println(this.title + " pages: " + this.pages);
+        }
+}
+
+class Library{
+
+        String name;
+        int year;
+        Book[] books;
+
+        Library(String name, int year, Book[] books){
+                this.name = name;
+                this.year = year;
+                this.books = books;
+        }
+
+        void showInfo(){
+
+                System.out.println(this.name + " " + this.year );
+                System.out.println("Books availabe: ");
+                
+                for(Book book : books){
+                        book.showInfo();
+                }
+        }
+}
+
+// class Account{
+        
+//         int accountNo;
+//         String holderName;
+//         double balance;
+
+//         Account(int a, String b, double c){
+
+//                 accountNo = a;
+//                 holderName = b;
+//                 balance = c;
+
+//         }
+
+//         void display(){
+
+//                 System.out.println("Account number : " + accountNo);
+//                 System.out.println("Holder name : " + holderName);
+//                 System.out.println(" Balance : " + balance);
+//         }
+// }
 public class Main{
         
         public static void main(String[]args){
                 
                  Scanner scanner = new Scanner(System.in);
-                 Random random = new Random();
+                //  Random random = new Random();
 
 
 //  SIMPLE ARITHMETIC OPERATION
@@ -258,23 +318,178 @@ public class Main{
         // }
 
 
-        int[] List = {1,10,20,100,45,3,4,5,90};
+        // int[] List = {1,10,20,100,45,3,4,5,90};
 
-        int count = 0;
+        // int count = 0;
 
-        for(int i = 0; i< List.length ; i++){
+        // for(int i = 0; i< List.length ; i++){
 
-                if(List[i] > 10){
+        //         if(List[i] > 10){
 
-                        count++;
-                }
+        //                 count++;
+        //         }
 
-        }
-        System.out.print("Number of element greater than 10 : " + count);
+        // }
+        // System.out.print("Number of element greater than 10 : " + count);
+
+
+        // String[] fruits ;
+
+        // int size ;
+
+        // System.out.print("Enter the size of array : ");
+        // size = scanner.nextInt();
+        // scanner.nextLine();
+
+        // fruits = new String[size];
+
+        // for(int i = 0; i < size; i++){
+
+        //         System.out.printf("enter %d fruit : " , i+1);
+        //         fruits[i] = scanner.nextLine();
+        // }
+
+        // for(String fruit : fruits){
+        //         System.out.print(fruit + " ");
+
+        // }
+ 
+// 2D ARRAY 
+
+        // char[][] Tele = {{'1','2','3'},{'4','5','6'},{'7','8','9'},{'*','0','#'}};
+
+        // for(char[]i : Tele ){
+                // for(char j : i ){
+                        // System.out.print(j + " ");
+                // }
+                // System.out.println();
+        // }
+
+        // String[] question = {"1.A grim reaper and an immortal warrior live together.",
+        //                      "2.In Reply 1988, which district/neighborhood do the families live in?",
+        //                      "3.In Business Proposal, what’s the name of Tae-mu’s company?"} ;
+
+        // String[][] options = {{"A) Hotel Del Luna","B) Goblin","C) My Roommate Is a Gumiho" ,"D) Tale of the Nine-Tailed"},
+        //                       {"A) Gangnam","B) Samseong-dong","C) Ssangmun-dong","D) Hongdae"},
+        //                       {"A) Banchan Holdings","B) Jang Ga Group","C) Go Food Company","D) Ha Ri Foods"}} ;
+
+        // int[] answer ={2,3,3} ;
+
+        // int guess;
+        // int score = 0;
+
+        // System.out.println("==================");
+        // System.out.println("QUIZZ TIMEEE!!!!!!");
+        // System.out.println("==================");
+
+        // for(int i = 0; i < question.length; i++){
+        //         System.out.println(question[i]);
+
+        //         for(String option : options[i]){
+        //                 System.out.println(option);
+
+        //         }
+
+        //         System.out.print("ANSWER : ");
+        //         guess = scanner.nextInt();
+
+        //         if(guess == answer[i]){
+        //                 System.out.println("--------------");
+        //                 System.out.println("SLAYYYYYYY!!!!");
+        //                 System.out.println("--------------");
+        //                 score++;
+        //         }
+        //         else{
+        //                 System.out.println("--------------");
+        //                 System.out.println("Wrong bitch!!");
+        //                 System.out.println("--------------");
+        //         }
+
+        // }
+
+        // System.out.print("your score is " + score + " out of " + question.length);
+
+
+        // System.out.println("^^^^^^^^^^^^^^^^^^^^^");
+        // System.out.println("SNAKE | WATER | GUN ");
+        // System.out.println("^^^^^^^^^^^^^^^^^^^^^");
+
+        // String[] choices = {"snake","water","gun"};
+        // String player;
+        // String comp;
+        // Boolean isPlay = true;
+
+        // do{
+
+        // System.out.print("Enter ur choice(snake water gun): ");
+        // player = scanner.nextLine().toLowerCase();
+
+        // if(!player.equals("snake") && 
+        //    !player.equals("water") && 
+        //    !player.equals("gun")){
+
+        //         System.out.println("Invalid choice ");
+        //         continue;
+        // }
+
+
+        // comp = choices[random.nextInt(3)];
+        // System.out.println("computer choice : " + comp);
+
+        // if(player.equals(comp)){
+        //         System.out.println("Its a Tie!!..Damnn!!");
+        // }
+
+        // else if ((player.equals("snake") && comp.equals("water")) || 
+        // (player.equals("water") && comp.equals("gun")) || 
+        // (player.equals("gun") && comp.equals("snake")) ){
+
+        //         System.out.println("<<<<<<<<<|| U SLAYEDDDDDD ||>>>>>>>");
+        //         System.out.println("<<<<<<<<<|| DAMNNNNNNNNNN ||>>>>>>>");
+                
+        // }
+        // else{
+        //         System.out.println("<<<<<<<<<|| U LOST BITCH TO A BOT!! ||>>>>>>>");
+        //         System.out.println("BETTER GIVE UP");
+        // }        
+
+        // System.out.print("wanna play again(yes/no):");
+        // String play = scanner.nextLine().toLowerCase();
+
+        // if(play.equals("yes")){
+        //         isPlay = true;
+        // }
+        // else{
+        //         isPlay = false;
+        // }
+
+        // }while(isPlay);
+        
+        // ACCOUNT PROBLEM
+        
+        // Account account = new Account(192929,"himanshu",4.33) ;
+
+        // account.display();
+
+// Aggregation
+
+        Book book1 = new Book("Lookism",584);
+        Book book2 = new Book("Eleceed",384);
+        Book book3 = new Book("Windbreaker",267);
+        
+        Book[] books = {book1,book2,book3};
+        Library library = new Library("MANHWA COMMUNITY", 1897, books);
+
+        library.showInfo();
+
+        
+
 
         scanner.close(); 
 
  }
+
+ 
 
 // //  SHOWBALANCE FUNCTION;
 
